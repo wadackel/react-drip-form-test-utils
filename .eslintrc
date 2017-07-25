@@ -14,13 +14,11 @@
     }
   },
   "plugins": [
-    "jest",
-    "flowtype"
+    "jest"
   ],
   "extends": [
     "airbnb",
-    "plugin:jest/recommended",
-    "plugin:flowtype/recommended"
+    "plugin:jest/recommended"
   ],
   "rules": {
     "no-console": "off",
