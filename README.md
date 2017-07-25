@@ -11,19 +11,15 @@ Mainly provide mocks for testing components. Enjoy the testing for react-drip-fo
 
 ## Table of Contents
 
-
-<!-- vim-markdown-toc Redcarpet -->
 * [Installation](#installation)
 * [API](#api)
-  * [mockContext(context = {})](#mockcontext-context)
-  * [mockFormProps(props = {})](#mockformprops-props)
-  * [mockFieldProps(props = {})](#mockfieldprops-props)
-  * [mockGroupProps(props = {})](#mockgroupprops-props)
+  * [mockContext(context = {})](#mockcontextcontext--)
+  * [mockFormProps(props = {})](#mockformpropsprops--)
+  * [mockFieldProps(props = {})](#mockfieldpropsprops--)
+  * [mockGroupProps(props = {})](#mockgrouppropsprops--)
 * [Related projects](#related-projects)
 * [Contribute](#contribute)
 * [License](#license)
-
-<!-- vim-markdown-toc -->
 
 
 
