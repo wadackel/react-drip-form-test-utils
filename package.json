@@ -1,6 +1,6 @@
 {
   "name": "react-drip-form-test-utils",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha.1",
   "description": "Provides useful utilities for testing react-drip-form.",
   "main": "lib/index.js",
   "scripts": {
@@ -25,22 +25,48 @@
     "react-drip-form",
     "drip-form"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsuyoshiwada/react-drip-form-test-utils.git"
+  },
   "author": "tsuyoshiwada",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tsuyoshiwada/react-drip-form-test-utils/issues"
+  },
+  "homepage": "https://github.com/tsuyoshiwada/react-drip-form-test-utils#readme",
+  "files": [
+    "lib"
+  ],
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
     "babel-jest": "^20.0.3",
     "babel-preset-env": "^1.6.0",
     "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "codecov": "^2.2.0",
+    "enzyme": "^2.9.1",
+    "eslint": "^4.3.0",
     "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-flowtype": "^2.35.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jest": "^20.0.3",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.1.0",
     "jest": "^20.0.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-drip-form": "^0.0.2",
+    "react-test-renderer": "^15.6.1",
     "rimraf": "^2.6.1"
+  },
+  "jest": {
+    "rootDir": "src",
+    "testMatch": [
+      "**/?(*.)spec.js"
+    ]
   }
 }
