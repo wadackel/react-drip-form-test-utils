@@ -1,7 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { dripFormField } from 'react-drip-form';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
+import noop from '../internal/noop';
 import mockContext from '../mockContext';
 
 const Field = dripFormField()(() => <div />);
@@ -25,11 +26,7 @@ describe('mockContext()', () => {
     const { restore } = silentError();
 
     expect(() => {
-      mount(
-        <form>
-          <Field name="foo" />
-        </form>
-      );
+      shallow(<Field name="foo" />);
     }).toThrow();
 
     restore();
@@ -37,14 +34,16 @@ describe('mockContext()', () => {
 
 
   test('Should be render with mock context', () => {
-    const context = mockContext();
-    const element = (
-      <form>
-        <Field name="foo" />
-      </form>
-    );
-    const wrapper = mount(element, { context });
+    shallow(<Field name="foo" />, { context: mockContext() });
+  });
 
-    // console.log(wrapper.debug());
+
+  test('Should be override context properties', () => {
+    const register = () => {};
+
+    expect(mockContext().register).toBe(noop);
+    expect(mockContext({ register }).register).toBe(register);
+
+    expect(mockContext({ touches: ['foo', 'bar'] }).touches).toEqual(['foo', 'bar']);
   });
 });

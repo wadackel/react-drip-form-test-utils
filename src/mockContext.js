@@ -12,7 +12,7 @@ const mockContext = (context = {}) => ({
   updateNormalizers: noop,
   updateMessages: noop,
   updateLabel: noop,
-  validating: false,
+  validating: [],
   values: {},
   errors: {},
   touches: [],
